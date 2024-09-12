@@ -1,6 +1,8 @@
 /* Start Variables */
 :root {
     --main-trans: 0.3s;
+    --section-padding: 100px;
+
     /* Primary Colors */
     --Soft-red: hsl(7, 99%, 70%);
     --Yellow: hsl(51, 100%, 49%);
@@ -285,6 +287,59 @@ header + h1 + a img {
     color: var(--Dark-blue);
 }
 
+.testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: #fffbf8;
+}
+
+.testimonials h1 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--Grayish-blue);
+    letter-spacing: 7px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.testimonials .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 60px 0;
+    gap: 30px;
+}
+
+.testimonials .grid .test {
+    text-align: center;
+}
+
+.testimonials .grid .test img {
+    border-radius: 50%;
+    width: 80px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.testimonials .grid .test p {
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 60px;
+    color: var(--Dark-blue);
+}
+
+.testimonials .grid .test h2 {
+    color: var(--Very-dark-desaturated-blue);
+    margin-bottom: 20px;
+}
+
+.testimonials .grid .test h4 {
+    color: var(--Grayish-blue);
+    font-weight: 500;
+}
+
+
+
 /* End Local Rules */
 
 
@@ -348,6 +403,15 @@ header + h1 + a img {
 
     .about .grid .card.photography {
         background-image: url(../images/mobile/image-photography.jpg);
+    }
+
+    .testimonials h1 {
+        font-size: 19px;
+        letter-spacing: 4px;
+    }
+
+    .testimonials .grid .test img {
+        margin-bottom: 40px;
     }
 }
 /* End Custom */
