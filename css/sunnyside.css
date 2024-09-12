@@ -247,6 +247,44 @@ header + h1 + a img {
     opacity: 1;
 }
 
+.about .grid .card.graphic-design {
+    background-image: url(../images/desktop/image-graphic-design.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about .grid .card.graphic-design h1 {
+    color: var(--Dark-desaturated-cyan);
+}
+
+.about .grid .card.graphic-design p {
+    color: var(--Dark-moderate-cyan);
+}
+
+.about .grid .card.photography {
+    background-image: url(../images/desktop/image-photography.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.about .grid .card.photography h1 {
+    color: var(--Dark-blue);
+}
+
+.about .grid .card.photography p {
+    color: var(--Dark-blue);
+}
+
 /* End Local Rules */
 
 
@@ -302,6 +340,14 @@ header + h1 + a img {
 
     .about .grid .card .details p {
         font-size: 17px;
+    }
+
+    .about .grid .card.graphic-design {
+        background-image: url(../images/mobile/image-graphic-design.jpg);
+    }
+
+    .about .grid .card.photography {
+        background-image: url(../images/mobile/image-photography.jpg);
     }
 }
 /* End Custom */
