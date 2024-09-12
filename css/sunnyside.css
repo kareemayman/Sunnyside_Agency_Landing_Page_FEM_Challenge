@@ -192,19 +192,20 @@ header + h1 + a img {
     align-items: center;
 }
 
-.about .grid .card:first-of-type .details {
-    width: 400px;
+.about .grid .card .details {
+    width: 500px;
 }
 
-.about .grid .card:first-of-type .details h1 {
+.about .grid .card .details h1 {
     font-weight: 900;
     color: var(--Very-dark-desaturated-blue);
-    font-size: 40px;
+    font-size: 50px;
 }
 
-.about .grid .card:first-of-type .details p {
+.about .grid .card .details p {
     color: var(--Dark-grayish-blue);
     line-height: 1.6;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
@@ -262,6 +263,14 @@ header + h1 + a img {
 
     .about .grid .card:nth-of-type(2) {
         order: -1;
+    }
+
+    .about .grid .card .details h1 {
+        font-size: 40px;
+    }
+
+    .about .grid .card .details p {
+        font-size: 17px;
     }
 }
 /* End Custom */
