@@ -79,6 +79,30 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+a.special-link {
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+    position: relative;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+a.special-link::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 120%;
+    border-radius: 10px;
+    bottom: -1px;
+    left: -10%;
+    z-index: -1;
+    transition: var(--main-trans);
+    opacity: 0.2;
+}
 /* End Global Rules */
 
 
@@ -87,6 +111,7 @@ a {
     background-image: url(../images/desktop/image-header.jpg);
     background-size: cover;
     min-height: 100dvh;
+    background-position: center;
 }
 
 header .container {
@@ -110,9 +135,7 @@ header .container nav a:hover {
     background-color: white;
 }
 
-header .container nav i {
-    color: white;
-    font-size: 22px;
+header .container nav img {
     display: none;
 }
 
@@ -133,13 +156,12 @@ header + h1 {
     margin-top: 100px;
 }
 
-header + h1 + a i {
+header + h1 + a img {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     translate: -50% -50%;
     color: white;
-    font-size: 60px;
     cursor: pointer;
     animation: arrow 1s linear infinite;
 }
@@ -153,6 +175,47 @@ header + h1 + a i {
         margin-top: 10px;
     }
 }
+
+.about .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about .grid .card img {
+    width: 100%;
+}
+
+.about .grid .card:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .grid .card:first-of-type .details {
+    width: 400px;
+}
+
+.about .grid .card:first-of-type .details h1 {
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 40px;
+}
+
+.about .grid .card:first-of-type .details p {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about .grid .card:first-of-type .details a::before {
+    background-color: var(--Yellow);
+}
+
+.about .grid .card:first-of-type .details a:hover::before {
+    opacity: 1;
+}
+
 /* End Local Rules */
 
 
@@ -164,17 +227,41 @@ header + h1 + a i {
         display: none;
     }
 
-    header .container nav i {
+    header .container nav img {
         display: block;
     }
 
     .home {
         background-image: url(../images/mobile/image-header.jpg);
+        background-size: cover;
+        background-position: center;
     }
 
     header + h1 {
         text-align: center;
         font-size: 40px;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .mob {
+        display: initial;
+        width: 100%;
+    }
+
+    .about .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about .grid .card:first-of-type .details {
+        width: 300px;
+        text-align: center;
+    }
+
+    .about .grid .card:nth-of-type(2) {
+        order: -1;
     }
 }
 /* End Custom */
@@ -183,6 +270,10 @@ header + h1 + a i {
 @media (min-width: 769px) {
   .container {
     width: 750px;
+  }
+
+  .mob {
+    display: none;
   }
 }
 
