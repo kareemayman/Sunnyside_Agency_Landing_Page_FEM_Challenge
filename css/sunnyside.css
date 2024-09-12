@@ -21,6 +21,11 @@
 
 /* Start Font Families */
 /* Barlow Font Family */
+.barlow-bold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 .barlow-semibold {
   font-family: "Barlow", sans-serif;
   font-weight: 600;
@@ -63,6 +68,11 @@ ul {
   padding: 0;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -73,14 +83,100 @@ ul {
 
 
 /* Start Local Rules */
+.home {
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    min-height: 100dvh;
+}
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container nav a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 50px;
+    transition: var(--main-trans);
+    background-color: transparent;
+}
+
+header .container nav a:hover {
+    color: black;
+    background-color: white;
+}
+
+header .container nav i {
+    color: white;
+    font-size: 22px;
+    display: none;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    letter-spacing: 2px;
+    padding: 30px 0;
+}
+
+header + h1 {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 60px;
+    letter-spacing: 10px;
+    margin-top: 100px;
+}
+
+header + h1 + a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    animation: arrow 1s linear infinite;
+}
+
+@keyframes arrow {
+    0%, 100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 10px;
+    }
+}
 /* End Local Rules */
 
 
 
 /* Start Media Queries */
 /* Start Custom */
+@media (width <= 769px) {
+    header .container nav a {
+        display: none;
+    }
 
+    header .container nav i {
+        display: block;
+    }
+
+    .home {
+        background-image: url(../images/mobile/image-header.jpg);
+    }
+
+    header + h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+}
 /* End Custom */
 /* Container Media */
 /* Small */
