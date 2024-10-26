@@ -122,6 +122,27 @@ a.special-link::before {
     transition: var(--main-trans);
     opacity: 0.2;
 }
+
+.scroll-to-top {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--Yellow);
+    color: white;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.scroll-to-top:hover {
+    background-color: hsl(51, 100%, 43%);
+}
 /* End Global Rules */
 
 
